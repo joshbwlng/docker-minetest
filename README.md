@@ -1,12 +1,14 @@
 # docker-minetest
 Minetest server in Docker (Arch)
 
-## Build
-```
-docker-compose build
-```
+Image: https://hub.docker.com/r/joshbwlng/minetest
 
-## Run
-```
-docker-compose up
+## Example usage
+```yaml
+services:
+  minetest:
+    image: joshbwlng/minetest:latest
+    ports:
+      - 30000:30000/udp
+    restart: unless-stopped
 ```
